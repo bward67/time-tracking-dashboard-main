@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="container grid">
+      <div class="hero">
+        <div class="hero-top">
+          <img src="images/image-jeremy.png" alt="head-shot" class="avatar" />
+          <div class="avatar-content">
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <p id="daily active">Daily</p>
+          <p id="weekly">Weekly</p>
+          <p id="monthly">Monthly</p>
+        </div>
+      </div>
+      <div class="card card-work">
+        <div class="card-wrap" id="work">
+          <div class="title-line">
+            <div class="title">Work</div>
+            <img class="ellipsis" src="images/icon-ellipsis.svg" alt="" />
+          </div>
+          <div class="hours-line">
+            <h2 id="current">32hrs</h2>
+            <p id="previous">Last Week - 36hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card card-play">
+        <div class="card-wrap" id="play">
+          <div class="title-line">
+            <div class="title">Play</div>
+            <img src="images/icon-ellipsis.svg" alt="" />
+          </div>
+          <div class="hours-line">
+            <h2 id="current">10hrs</h2>
+            <p id="previous">Last Week - 8hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card card-study">
+        <div class="card-wrap" id="study">
+          <div class="title-line">
+            <div class="title">Study</div>
+            <img src="images/icon-ellipsis.svg" alt="" />
+          </div>
+          <div class="hours-line">
+            <h2 id="current">4hrs</h2>
+            <p id="previous">Last Week - 7hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-exercise">
+        <div class="card-wrap" id="exercise">
+          <div class="title-line">
+            <div class="title">Exercise</div>
+            <img src="images/icon-ellipsis.svg" alt="" />
+          </div>
+          <div class="hours-line">
+            <h2 id="current">4hrs</h2>
+            <p id="previous">Last Week - 5hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card card-social">
+        <div class="card-wrap" id="social">
+          <div class="title-line">
+            <div class="title">Social</div>
+            <img src="images/icon-ellipsis.svg" alt="" />
+          </div>
+          <div class="hours-line">
+            <h2 id="current">5hrs</h2>
+            <p id="previous">Last Week - 10hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="card card-self-care">
+        <div class="card-wrap" id="self-care">
+          <div class="title-line">
+            <div class="title">Self Care</div>
+            <img src="images/icon-ellipsis.svg" alt="" />
+          </div>
+          <div class="hours-line">
+            <h2 id="current">2hrs</h2>
+            <p id="previous">Last Week - 2hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

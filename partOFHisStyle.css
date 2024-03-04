@@ -1,0 +1,113 @@
+:root {
+  --clr-light-red-work: hsl(15, 100%, 70%);
+  --clr-soft-blue-play: hsl(195, 74%, 62%);
+  --clr-light-red-study: hsl(348, 100%, 68%);
+  --clr-lime-green-exercise: hsl(145, 58%, 55%);
+  --clr-violet-social: hsl(264, 64%, 52%);
+  --clr-soft-orange-selfcare: hsl(43, 84%, 65%);
+
+  --clr-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-hover-blue: hsl(235, 41%, 44%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+
+  --br: 15px;
+  --br-colored: 15px 15px 10px 10px;
+
+  --transition: 200ms ease-in-out;
+}
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--clr-very-dark-blue);
+  display: grid;
+  place-items: center;
+  padding: 8rem 2.5rem;
+}
+.activity-tracker {
+  /*This holds all the cards*/
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-auto-rows: max-content;
+  /*this means it will be created by the browser not us
+  so then each row will take as much height as it requires*/
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: clamp(1.5rem, 3vw, 2rem);
+  /*this means it will never get smaller than 1.5rem 
+  and it will try to get to 3 viewport widths but it 
+  will never get larger than 2rem */
+  border: 2px red solid;
+}
+.activity-tracker__hero {
+  background-color: var(--clr-dark-blue);
+  border-radius: var(--br);
+  width: 100%;
+  overflow: hidden;
+}
+.activity-tracker__avatar {
+  background-color: var(--clr-desaturated-blue);
+  border-radius: var(--br);
+  width: 100%;
+  border: green solid 2px;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap; /*so that if the screen is very small the text will wrap under the img*/
+
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.activity-tracker__avatar img {
+  width: 6.4rem;
+}
+
+.activity-tracker__cards {
+  background-color: var(--clr-dark-blue);
+}
+@media (min-width: 568px) {
+  .activity-tracker {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    /*this means our grid will create columns as it needs and or 
+    can fit and each col will be a minimum of 15rem and it will
+    expand until a new item of 15rem has the room to be added*/
+    grid-template-rows: repeat(2, 1fr);
+    min-height: 51.8rem;
+    max-width: 1100px;
+  }
+
+  .activity-tracker__hero {
+    grid-row: 1/3; /*as we want it to span the 2 rows*/
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .activity-tracker__avatar {
+    padding-block: 3.5rem 8rem;
+    flex-flow: column nowrap;
+    align-items: start;
+    gap: 4.3rem;
+    flex: 1 0 auto; /*we want it to grow but NOT shrink
+   and auto means the items size is determined by its content
+   or intrinsic size*/
+  }
+}
+
+/*
+https://www.youtube.com/watch?v=l9Qw8y3LfCY
+
+11:00*/

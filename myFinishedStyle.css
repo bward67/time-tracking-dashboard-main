@@ -1,0 +1,229 @@
+:root {
+  --clr-light-red-work: hsl(15, 100%, 70%);
+  --clr-soft-blue-play: hsl(195, 74%, 62%);
+  --clr-light-red-study: hsl(348, 100%, 68%);
+  --clr-lime-green-exercise: hsl(145, 58%, 55%);
+  --clr-violet-social: hsl(264, 64%, 52%);
+  --clr-soft-orange-selfcare: hsl(43, 84%, 65%);
+
+  --clr-very-dark-blue: hsl(226, 43%, 10%);
+  --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-desaturated-blue: hsl(235, 45%, 61%);
+  --clr-hover-blue: hsl(235, 41%, 44%);
+  --clr-pale-blue: hsl(236, 100%, 87%);
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+
+  --br: 15px;
+  --br-colored: 15px 15px 10px 10px;
+
+  --transition: 200ms ease-in-out;
+}
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--clr-very-dark-blue);
+}
+img {
+  max-width: 100%;
+}
+h1 {
+  font-weight: var(--fw-300);
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: var(--fw-300);
+}
+.container {
+  max-width: 90%;
+  margin: 4rem auto;
+  display: grid;
+  grid-auto-rows: max-content;
+  /*this means it will be created by the browser not us
+  so then each row will take as much height as it requires*/
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 2rem);
+  /*this means it will never get smaller than 1.5rem 
+  and it will try to get to 3 viewport widths but it 
+  will never get larger than 2rem */
+}
+.hero {
+  background-color: var(--clr-dark-blue);
+  /*by doing this the .hero-bottom will automatically be this color
+  and I won't have to give the .hero-bottom ad background-color*/
+  border-radius: var(--br);
+}
+.hero-top {
+  background-color: var(--clr-desaturated-blue);
+  border-radius: var(--br);
+  color: var(--clr-pale-blue);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap; /*so that if the screen is very small the text will wrap under the img*/
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.avatar {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  max-width: 70px;
+}
+.avatar-content p {
+  font-size: 0.9rem;
+}
+.hero-bottom {
+  color: var(--clr-pale-blue);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+.btns {
+  font-family: inherit;
+  border: none;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-desaturated-blue);
+  padding: 1rem;
+  transition: color 250ms;
+}
+.hero-bottom button:where(.active, :hover) {
+  /*I just learnt this so instead of having to do them separately 
+  I can just say :where the p is .active or :hover ... 
+  you can also use the word is instead of where*/
+  color: #ffffff !important;
+  cursor: pointer;
+  scale: 1.2;
+}
+.card {
+  border-radius: var(--br);
+  /*padding-block: 1.5rem 0;*/
+  display: grid;
+  grid-template-rows: auto-fit(3.8rem 1fr);
+  /*this allows for the top colored part over the 
+  dark blue box to take up 3.8rem in width and the blue box
+  to take up 1fr*/
+  grid-template-columns: 1fr;
+}
+.card-work {
+  background-color: var(--clr-light-red-work);
+}
+.card-play {
+  background-color: var(--clr-soft-blue-play);
+}
+.card-study {
+  background-color: var(--clr-light-red-study);
+}
+.card-exercise {
+  background-color: var(--clr-lime-green-exercise);
+}
+.card-social {
+  background-color: var(--clr-violet-social);
+}
+.card-self-care {
+  background-color: var(--clr-soft-orange-selfcare);
+}
+.card-wrap {
+  background-color: var(--clr-dark-blue);
+  border-radius: var(--br-colored);
+  /*maybe this is a bit hacky but there was a very slight
+  color showing under the blue box and this fixed it*/
+  padding: 1.5rem;
+}
+.title-line,
+.hours-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+#previous {
+  color: var(--clr-pale-blue);
+}
+
+.card .card-wrap:hover {
+  cursor: pointer;
+  background-color: var(--clr-hover-blue);
+}
+
+.title-line .svg {
+  transition: #ffffff 250ms;
+}
+.title-line .svg:hover > svg path {
+  fill: #ffffff;
+}
+
+@media (min-width: 568px) {
+  .container {
+    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    /*this means our grid will create columns as it needs and as it can fit them and each col will be
+    a minimum of 17rem and it will expand until a new
+    item of 17rem has the room to be added*/
+    grid-template-rows: 1fr 1fr;
+  }
+  .hero {
+    grid-row: 1/3; /*to make it stretch to 2 rows*/
+  }
+  .card {
+    grid-template-rows: auto-fit(4.5rem 1fr);
+  }
+  .card-wrap {
+    content: fit;
+    padding-block: 2rem;
+    /*Must have these so that at the
+    background-color on the top/behind does NOT show
+    thru on the bottom*/
+  }
+  .avatar-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-top,
+  .hero-bottom {
+    flex-direction: column;
+    align-items: start; /*so that they align left*/
+  }
+  .hero-top {
+    padding-bottom: 2.8rem;
+  }
+  .hero-bottom {
+    padding: 1rem 0 0 1rem;
+  }
+
+  .hero-bottom #btns:last-child {
+    margin-bottom: 1rem;
+  }
+  #btns {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  .hours-line {
+    display: block;
+  }
+  #previous {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .avatar {
+    margin-bottom: 2rem;
+  }
+}

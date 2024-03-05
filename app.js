@@ -103,9 +103,9 @@ const displayCards = async (clickedOption) => {
     <div class="card-bg">
           <img src="images/icon-${itemClass}.svg" alt="" />
         </div>
-        <div class="card-wrap" id="work">
+        <div class="card-wrap">
           <div class="title-line">
-            <div class="title">${name}</div>
+            <h2 class="title">${name}</h2>
             <div class="svg">
               <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -117,8 +117,8 @@ const displayCards = async (clickedOption) => {
             </div>
           </div>
           <div class="hours-line">
-            <h2 id="current">${timeframeData.current}hrs</h2>
-            <p id="previous">${previousTimeframe} - ${timeframeData.previous}hrs</p>
+            <h3>${timeframeData.current}hrs</h3>
+            <p>${previousTimeframe} - ${timeframeData.previous}hrs</p>
           </div>
         </div> </div>`;
     section.innerHTML = newSection;

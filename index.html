@@ -22,166 +22,166 @@
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
-    <div class="container grid">
-      <div class="hero">
-        <div class="hero-top">
-          <img src="images/image-jeremy.png" alt="head-shot" class="avatar" />
-          <div class="avatar-content">
-            <p>Report for</p>
-            <h1>Jeremy Robson</h1>
+    <main>
+      <div class="container grid">
+        <div class="hero">
+          <div class="hero-top">
+            <img src="images/image-jeremy.png" alt="head-shot" class="avatar" />
+            <div class="avatar-content">
+              <p>Report for</p>
+              <p>Jeremy Robson</p>
+            </div>
+          </div>
+          <div class="hero-bottom">
+            <button class="btns" data-option="daily">Daily</button>
+            <button class="btns" data-option="weekly">Weekly</button>
+            <button class="btns" data-option="monthly">Monthly</button>
           </div>
         </div>
-        <div class="hero-bottom">
-          <button class="btns" data-option="daily">Daily</button>
-          <button class="btns" data-option="weekly">Weekly</button>
-          <button class="btns" data-option="monthly">Monthly</button>
+        <!--
+        <section class="card-work">
+          <div class="card card-work"
+          <div class="card-bg">
+            <img src="images/icon-work.svg" alt="" />
+          </div>
+          <div class="card-wrap">
+            <div class="title-line">
+              <div class="title">Work</div>
+              <div class="svg">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="hours-line">
+              <h2 id="current">32hrs</h2>
+              <p id="previous">Last Week - 36hrs</p>
+            </div>
+          </div>
         </div>
+        </section>
+        <section class="card card-play">
+          <div class="card-bg">
+            <img src="images/icon-play.svg" alt="" />
+          </div>
+          <div class="card-wrap" id="play">
+            <div class="title-line">
+              <div class="title">Play</div>
+              <div class="svg">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="hours-line">
+              <h2 id="current">10hrs</h2>
+              <p id="previous">Last Week - 8hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="card card-study">
+          <div class="card-bg">
+            <img src="images/icon-study.svg" alt="" />
+          </div>
+          <div class="card-wrap" id="study">
+            <div class="title-line">
+              <div class="title">Study</div>
+              <div class="svg">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="hours-line">
+              <h2 id="current">4hrs</h2>
+              <p id="previous">Last Week - 7hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="card card-exercise">
+          <div class="card-bg">
+            <img src="images/icon-exercise.svg" alt="" />
+          </div>
+          <div class="card-wrap" id="exercise">
+            <div class="title-line">
+              <div class="title">Exercise</div>
+              <div class="svg">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="hours-line">
+              <h2 id="current">4hrs</h2>
+              <p id="previous">Last Week - 5hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="card card-social">
+          <div class="card-bg">
+            <img src="images/icon-social.svg" alt="" />
+          </div>
+          <div class="card-wrap" id="social">
+            <div class="title-line">
+              <div class="title">Social</div>
+              <div class="svg">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="hours-line">
+              <h2 id="current">5hrs</h2>
+              <p id="previous">Last Week - 10hrs</p>
+            </div>
+          </div>
+        </section>
+        <section class="card card-self-care">
+          <div class="card-bg">
+            <img src="images/icon-self-care.svg" alt="" />
+          </div>
+          <div class="card-wrap" id="self-care">
+            <div class="title-line">
+              <div class="title">Self Care</div>
+              <div class="svg">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="hours-line">
+              <h2 id="current">2hrs</h2>
+              <p id="previous">Last Week - 2hrs</p>
+            </div>
+          </div>
+        </section>
+        -->
       </div>
-      <!--
-      <section class="card-work">
-        <div class="card card-work"
-        <div class="card-bg">
-          <img src="images/icon-work.svg" alt="" />
-        </div>
-        <div class="card-wrap" id="work">
-          <div class="title-line">
-            <div class="title">Work</div>
-            <div class="svg">
-              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                  fill="#BBC0FF"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="hours-line">
-            <h2 id="current">32hrs</h2>
-            <p id="previous">Last Week - 36hrs</p>
-          </div>
-        </div>
-      </div>
-      </section>
-
-      <section class="card card-play">
-        <div class="card-bg">
-          <img src="images/icon-play.svg" alt="" />
-        </div>
-        <div class="card-wrap" id="play">
-          <div class="title-line">
-            <div class="title">Play</div>
-            <div class="svg">
-              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                  fill="#BBC0FF"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="hours-line">
-            <h2 id="current">10hrs</h2>
-            <p id="previous">Last Week - 8hrs</p>
-          </div>
-        </div>
-      </section>
-      <section class="card card-study">
-        <div class="card-bg">
-          <img src="images/icon-study.svg" alt="" />
-        </div>
-        <div class="card-wrap" id="study">
-          <div class="title-line">
-            <div class="title">Study</div>
-            <div class="svg">
-              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                  fill="#BBC0FF"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="hours-line">
-            <h2 id="current">4hrs</h2>
-            <p id="previous">Last Week - 7hrs</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="card card-exercise">
-        <div class="card-bg">
-          <img src="images/icon-exercise.svg" alt="" />
-        </div>
-        <div class="card-wrap" id="exercise">
-          <div class="title-line">
-            <div class="title">Exercise</div>
-            <div class="svg">
-              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                  fill="#BBC0FF"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="hours-line">
-            <h2 id="current">4hrs</h2>
-            <p id="previous">Last Week - 5hrs</p>
-          </div>
-        </div>
-      </section>
-      <section class="card card-social">
-        <div class="card-bg">
-          <img src="images/icon-social.svg" alt="" />
-        </div>
-        <div class="card-wrap" id="social">
-          <div class="title-line">
-            <div class="title">Social</div>
-            <div class="svg">
-              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                  fill="#BBC0FF"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="hours-line">
-            <h2 id="current">5hrs</h2>
-            <p id="previous">Last Week - 10hrs</p>
-          </div>
-        </div>
-      </section>
-      <section class="card card-self-care">
-        <div class="card-bg">
-          <img src="images/icon-self-care.svg" alt="" />
-        </div>
-        <div class="card-wrap" id="self-care">
-          <div class="title-line">
-            <div class="title">Self Care</div>
-            <div class="svg">
-              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                  fill="#BBC0FF"
-                  fill-rule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="hours-line">
-            <h2 id="current">2hrs</h2>
-            <p id="previous">Last Week - 2hrs</p>
-          </div>
-        </div>
-      </section>
-      -->
-    </div>
+    </main>
   </body>
   <script src="app.js"></script>
 </html>

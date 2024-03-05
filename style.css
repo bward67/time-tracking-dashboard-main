@@ -6,6 +6,46 @@
   --clr-violet-social: hsl(264, 64%, 52%);
   --clr-soft-orange-selfcare: hsl(43, 84%, 65%);
 
+  --clr-linear-gradient-work: linear-gradient(
+    hsl(15, 100%, 70%) 0%,
+    hsl(15, 100%, 70%) 75%,
+    hsl(235, 46%, 20%) 75%,
+    hsl(235, 46%, 20%) 100%
+  );
+
+  --clr-linear-gradient-play: linear-gradient(
+    hsl(195, 74%, 62%) 0%,
+    hsl(195, 74%, 62%) 75%,
+    hsl(235, 46%, 20%) 75%,
+    hsl(235, 46%, 20%) 100%
+  );
+
+  --clr-linear-gradient-study: linear-gradient(
+    hsl(348, 100%, 68%) 0%,
+    hsl(348, 100%, 68%) 75%,
+    hsl(235, 46%, 20%) 75%,
+    hsl(235, 46%, 20%) 100%
+  );
+
+  --clr-linear-gradient-exercise: linear-gradient(
+    hsl(145, 58%, 55%) 0%,
+    hsl(145, 58%, 55%) 75%,
+    hsl(235, 46%, 20%) 75%,
+    hsl(235, 46%, 20%) 100%
+  );
+  --clr-linear-gradient-social: linear-gradient(
+    hsl(264, 64%, 52%) 0%,
+    hsl(264, 64%, 52%) 75%,
+    hsl(235, 46%, 20%) 75%,
+    hsl(235, 46%, 20%) 100%
+  );
+  --clr-linear-gradient-selfcare: linear-gradient(
+    hsl(43, 84%, 65%) 0%,
+    hsl(43, 84%, 65%) 75%,
+    hsl(235, 46%, 20%) 75%,
+    hsl(235, 46%, 20%) 100%
+  );
+
   --clr-very-dark-blue: hsl(226, 43%, 10%);
   --clr-dark-blue: hsl(235, 46%, 20%);
   --clr-desaturated-blue: hsl(235, 45%, 61%);
@@ -30,25 +70,28 @@
 }
 
 body {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "Rubik", sans-serif;
   background-color: var(--clr-very-dark-blue);
 }
+
 img {
   max-width: 100%;
 }
 h1 {
-  font-weight: var(--fw-300);
-  color: #ffffff;
-  font-size: 1.5rem;
+  visibility: hidden;
 }
-h2 {
+.title {
+  font-size: 1rem;
+  font-weight: var(--fw-500);
+}
+h3 {
   font-size: 2rem;
   font-weight: var(--fw-300);
 }
 .container {
   max-width: 90%;
-  margin: 4rem auto;
+  margin: 8.1rem 2.4rem;
   display: grid;
   grid-auto-rows: max-content;
   /*this means it will be created by the browser not us
@@ -80,8 +123,14 @@ h2 {
   border-radius: 50%;
   max-width: 70px;
 }
+
 .avatar-content p {
   font-size: 0.9rem;
+}
+.avatar-content p:last-child {
+  font-weight: var(--fw-300);
+  color: #ffffff;
+  font-size: 1.5rem;
 }
 .hero-bottom {
   color: var(--clr-pale-blue);
@@ -101,7 +150,7 @@ h2 {
   /*I just learnt this so instead of having to do them separately 
   I can just say :where the p is .active or :hover ... 
   you can also use the word is instead of where*/
-  color: #ffffff !important;
+  color: #ffffff;
   cursor: pointer;
   /*I added these bottom 3 just because I can :)
   AND it looks better in my opinion */
@@ -145,22 +194,22 @@ h2 {
 }
 
 .card-work {
-  background-color: var(--clr-light-red-work);
+  background-image: var(--clr-linear-gradient-work);
 }
 .card-play {
-  background-color: var(--clr-soft-blue-play);
+  background-image: var(--clr-linear-gradient-play);
 }
 .card-study {
-  background-color: var(--clr-light-red-study);
+  background-image: var(--clr-linear-gradient-study);
 }
 .card-exercise {
-  background-color: var(--clr-lime-green-exercise);
+  background-image: var(--clr-linear-gradient-exercise);
 }
 .card-social {
-  background-color: var(--clr-violet-social);
+  background-image: var(--clr-linear-gradient-social);
 }
 .card-self-care {
-  background-color: var(--clr-soft-orange-selfcare);
+  background-image: var(--clr-linear-gradient-selfcare);
 }
 
 .title-line,
@@ -171,7 +220,7 @@ h2 {
   color: #ffffff;
   margin-top: 0.5rem;
 }
-#previous {
+.hours-line p {
   color: var(--clr-pale-blue);
 }
 
@@ -189,18 +238,18 @@ h2 {
 
 @media (min-width: 568px) {
   .container {
-    max-width: 1200px;
+    max-width: 1300px;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     /*this means our grid will create columns as it needs and as it can fit them and each col will be
     a minimum of 17rem and it will expand until a new
     item of 17rem has the room to be added*/
     grid-template-rows: 1fr 1fr;
   }
+  h2 {
+    font-size: 4rem;
+  }
   .hero {
     grid-row: 1/3; /*to make it stretch to 2 rows*/
-  }
-  .hero-top {
-    padding-block: 2rem 6rem !important;
   }
   .hero-top,
   .hero-bottom {
@@ -210,13 +259,23 @@ h2 {
   .hero-bottom {
     padding: 1rem 0 1rem 1rem;
   }
-  .hero-bottom #btns:last-child {
-    margin-bottom: 1rem;
+  .hero-bottom .btns:last-child {
+    margin-bottom: 0.5rem;
   }
   .hero-top img {
     margin-bottom: 1rem;
   }
-  #btns {
+  .avatar {
+    margin-bottom: 2rem;
+  }
+  .avatar-content p {
+    font-size: 1.1rem;
+  }
+  .avatar-content p:last-child {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  .btns {
     font-size: 1.2rem;
   }
   .card {
@@ -233,25 +292,12 @@ h2 {
     thru on the bottom*/
     height: 75%;
   }
-  .avatar-content p {
-    font-size: 1.1rem;
-  }
 
-  h1 {
-    font-size: 3rem;
-    line-height: 1.1;
-  }
-  h2 {
-    font-size: 4rem;
-  }
   .hours-line {
     display: block;
   }
-  #previous {
+  .hours-line p {
     margin-top: 0.5rem;
     font-size: 1.1rem;
-  }
-  .avatar {
-    margin-bottom: 2rem;
   }
 }
